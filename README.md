@@ -1,5 +1,5 @@
-
-== Bookmap ==
+Bookmap
+=======
 
 Generate an OpenLayers-based zoomable image of all the pages of an Internet Archive book, layed out as a grid.
 
