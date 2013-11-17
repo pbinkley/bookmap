@@ -15,6 +15,8 @@ SERVER=`jq -r '.server' source/$IAID.json`
 JP2='_jp2.zip'
 ZIP=$IAID$JP2
 
+mkdir source
+
 if [ -e "source/$ZIP" ]
 then
 	echo "source/$ZIP exists, not downloading again"
