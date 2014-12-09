@@ -9,13 +9,13 @@ fi
 IAID=$1
 echo Fetching $IAID
 
+mkdir source
+
 wget -O source/$IAID.json https://archive.org/details/$IAID?output=json
 DIR=`jq -r '.dir' source/$IAID.json`
 SERVER=`jq -r '.server' source/$IAID.json`
 JP2='_jp2.zip'
 ZIP=$IAID$JP2
-
-mkdir source
 
 if [ -e "source/$ZIP" ]
 then
