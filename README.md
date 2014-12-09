@@ -21,6 +21,10 @@ Process.sh will generate a uniform JPEG image of each page, using the most commo
 
 The example took about three hours to process, and the generated tiles allowed nine levels of zoom and came to 2.2gb. For the example linked above, I have removed the lowest two levels, leaving 200mb of tiles, in order to save server space.
 
+The process of building the large uniform JPEG can use a lot of temporary disk
+space. Set a TMPDIR environment variable to point to somewhere that has room if 
+you need to (see the [ImageMagick FAQ][3])
+
 I have developed this under OS/X but the tools should all run on Linux, and perhaps on Windows.
 
 Note: I installed jq and gdal with Homebrew. I had trouble with gdal because of conflicts with an earlier attempt to install it from source. I also had trouble adding JPEG2000 support to ImageMagick from Homebrew, and ended up installing this package instead: http://cactuslab.com/imagemagick/
@@ -32,3 +36,4 @@ Note: I installed jq and gdal with Homebrew. I had trouble with gdal because of 
 
   [1]: http://stedolan.github.io/jq/
   [2]: http://www.gdal.org/
+  [3]: http://imagemagick.sourceforge.net/http/www/FAQ.html#C1
